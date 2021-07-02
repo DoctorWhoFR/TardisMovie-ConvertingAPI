@@ -29,7 +29,7 @@ router.get('/convert', async (req, res) => {
 
         video
           .setVideoFormat('mp4')
-          .save('/var/www/html/downloads/', function (error, file) {
+          .save('/var/www/html/downloads/test.mp4', function (error, file) {
             if (!error)
               console.log('Video file: ' + file);
           });
