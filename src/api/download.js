@@ -28,7 +28,6 @@ router.get('/convert', async (req, res) => {
       process.then(function (video) {
 
         video
-          .setAudioCodec('libfaac')
           .setVideoFormat('mp4')
           .save('/var/www/html/downloads/', function (error, file) {
             if (!error)
