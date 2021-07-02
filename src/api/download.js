@@ -28,7 +28,7 @@ router.get('/convert', async (req, res) => {
       process.then(function (video) {
 
         video
-          .setVideoFormat('mp4')
+          .addCommand('-c:v copy -c:a copy')
           .save('/var/www/html/downloads/test.mp4', function (error, file) {
               console.log(error);  
             if (!error)
